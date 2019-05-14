@@ -9,7 +9,7 @@ const int FRAMECOUNT = 256;
 const int FRAMESIZE = 256;
 const int TLBSIZE = 16;
 
-int main(int argc, char** argv)
+int main(int argc, char *argv[])
 {
 char *physicalAddress;
 int logicalAddress;
@@ -21,10 +21,7 @@ int frameNumber;
 int offset;
 int pageMask = 65280;
 int offsetMask = 255;
-string fileName;
-//getline(cin, fileName);
-//can't get it to work on the same line
-fileName = "addresses.txt";
+string fileName = argv[1];
 ifstream fin;
 FILE* bin;
 
